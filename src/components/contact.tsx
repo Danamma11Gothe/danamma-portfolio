@@ -1,16 +1,16 @@
-import emailjs from "@emailjs/browser";
+import { useState, useRef, FormEvent, ChangeEvent } from "react";
 import { motion } from "framer-motion";
-import { useState, useRef, type FormEvent, type ChangeEvent } from "react";
+import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
 
+import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
-import { styles } from "../styles";
 import { slideIn } from "../utils/motion";
 
 // Contact
 export const Contact = () => {
-  const formRef = useRef<HTMLFormElement | null>(null);
+  const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -18,18 +18,14 @@ export const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
 
-  // handle form change
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
-
     setForm({ ...form, [name]: value });
   };
 
-  // validate form on submit
   const validateForm = () => {
-    // form fields
     const { name, email, message } = form;
 
     type Current = {
@@ -98,11 +94,7 @@ export const Contact = () => {
         import.meta.env.VITE_APP_TEMPLATE_ID,
         {
           from_name: form.name,
-<<<<<<< HEAD
           to_name: "Danamma Gothe",
-=======
-          to_name: "Shubham",
->>>>>>> 9b41d0b926c65158e8f534852ba6a5347c9138a9
           from_email: form.email.trim().toLowerCase(),
           to_email: import.meta.env.VITE_APP_EMAILJS_RECIEVER,
           message: form.message,
@@ -232,4 +224,4 @@ export const Contact = () => {
       </div>
     </SectionWrapper>
   );
-};
+}; 
