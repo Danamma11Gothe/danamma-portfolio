@@ -98,7 +98,11 @@ export const Contact = () => {
         import.meta.env.VITE_APP_TEMPLATE_ID,
         {
           from_name: form.name,
+<<<<<<< HEAD
           to_name: "Danamma Gothe",
+=======
+          to_name: "Shubham",
+>>>>>>> 9b41d0b926c65158e8f534852ba6a5347c9138a9
           from_email: form.email.trim().toLowerCase(),
           to_email: import.meta.env.VITE_APP_EMAILJS_RECIEVER,
           message: form.message,

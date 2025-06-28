@@ -49,9 +49,15 @@ export const Navbar = ({ hide }: NavbarProps) => {
             window.scrollTo(0, 0);
           }}
         >
+<<<<<<< HEAD
           {/* <img src={logo} alt="Logo" className="w-9 h-9 object-contain" /> */}
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
             Danamma&nbsp;<span className="sm:block hidden">|Front-End Developer</span>
+=======
+          <img src={logo} alt="Logo" className="w-9 h-9 object-contain" />
+          <p className="text-white text-[18px] font-bold cursor-pointer flex">
+            Shubham&nbsp;<span className="sm:block hidden">| Developer</span>
+>>>>>>> 9b41d0b926c65158e8f534852ba6a5347c9138a9
           </p>
         </Link>
 

@@ -1,6 +1,10 @@
 MIT License
 
+<<<<<<< HEAD
 Copyright (c) 2025 DANAMMA GOTHE
+=======
+Copyright (c) 2025 Danamma Gothe
+>>>>>>> 9b41d0b926c65158e8f534852ba6a5347c9138a9
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
