@@ -49,15 +49,9 @@ export const Navbar = ({ hide }: NavbarProps) => {
             window.scrollTo(0, 0);
           }}
         >
-<<<<<<< HEAD
           {/* <img src={logo} alt="Logo" className="w-9 h-9 object-contain" /> */}
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
-            Danamma&nbsp;<span className="sm:block hidden">|Front-End Developer</span>
-=======
-          <img src={logo} alt="Logo" className="w-9 h-9 object-contain" />
-          <p className="text-white text-[18px] font-bold cursor-pointer flex">
-            Shubham&nbsp;<span className="sm:block hidden">| Developer</span>
->>>>>>> 9b41d0b926c65158e8f534852ba6a5347c9138a9
+            Danamma&nbsp;<span className="sm:block hidden">| Front-End Developer</span>
           </p>
         </Link>
 
@@ -87,7 +81,7 @@ export const Navbar = ({ hide }: NavbarProps) => {
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
-            alt="Menu"
+            alt="menu"
             className="w-[28px] h-[28px] object-contain cursor-pointer"
             onClick={() => setToggle(!toggle)}
           />
@@ -98,7 +92,6 @@ export const Navbar = ({ hide }: NavbarProps) => {
               "p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl"
             )}
           >
-            {/* Nav Links (Mobile) */}
             <ul className="list-none flex justify-end items-start flex-col gap-4">
               {NAV_LINKS.map((link) => (
                 <li
@@ -108,16 +101,12 @@ export const Navbar = ({ hide }: NavbarProps) => {
                     "font-poppins font-medium cursor-pointer text-[16px]"
                   )}
                   onClick={() => {
-                    !link.link && setToggle(!toggle);
+                    setToggle(!toggle);
                     !link.link && setActive(link.title);
                   }}
                 >
                   {link.link ? (
-                    <a
-                      href={link.link}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
+                    <a href={link.link} target="_blank" rel="noreferrer noopener">
                       {link.title}
                     </a>
                   ) : (
